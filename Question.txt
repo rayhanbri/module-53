@@ -1,0 +1,156 @@
+1.  What is npm?(store and manger)
+
+
+npm (Node Package Manager) is the default package manager for Node.js.
+It helps developers install, manage, and share JavaScript libraries and tools.
+
+Think of npm as a store + manager for JavaScript packages.
+
+Why do we use npm?
+
+Instead of writing everything from scratch, we install ready-made packages.
+
+
+
+
+2.what is express.js?(framework)
+
+
+
+Express.js is a fast and minimal Node.js framework used to build web servers and RESTful APIs.
+
+One-line difference (often asked)
+Node.js → runtime
+Express.js → framework built on Node.js
+
+
+3.2️⃣ What is app.use()?
+
+
+
+
+app.use() is used to register middleware in Express.
+app.use(express.json());
+
+
+
+4.3️⃣ Difference between req.params and req.query
+
+
+
+
+
+req.params is used for route parameters, while req.query is used for query strings.
+| Feature    | req.params           | req.query           |
+| ---------- | -------------------- | ------------------- |
+| Comes from | URL path             | URL query string    |
+| Mandatory  | Yes                  | Optional            |
+| Used for   | Identifying resource | Filtering/searching |
+
+
+
+5.4️⃣ How does Express handle errors?
+
+
+
+
+Express handles errors using error-handling middleware.
+
+app.use((err, req, res, next) => {
+  res.status(500).json({ error: err.message });
+});
+
+
+6......Why do we use nodemon instead of node?
+
+
+
+nodemon is a development tool for Node.js that automatically restarts the server whenever it detects changes in your project files.
+
+It helps developers work faster and more efficiently during backend development.
+
+node runs your server once.
+
+nodemon runs your server and automatically restarts it when file changes are detected.
+
+nodemon → development only
+
+node → production
+
+
+7.....what is cors why we use this?
+
+
+
+
+CORS (Cross-Origin Resource Sharing) is a browser security mechanism that controls which frontend origins are allowed to access backend resources.
+
+By default, browsers block requests coming from a different origin.
+
+
+8.....Why browsers block cross-origin requests?
+
+To protect users from:
+
+Malicious websites
+
+Data theft
+
+Unauthorized API access
+
+This is called the Same-Origin Policy.
+
+Frontend: http://localhost:5173
+
+Backend: http://localhost:5000
+
+Different ports = different origins
+
+
+9....Why do we use CORS?
+
+We use CORS to tell the browser:
+
+“It’s okay for this frontend to access this backend.”
+
+
+
+10.  What is middleware?
+
+
+
+Middleware is a function that runs between the client request and the server response.
+
+It can:
+
+Read or modify the request (req)
+
+Modify the response (res)
+
+Decide whether the request continues or stops
+
+
+
+11.  Why middleware is used
+
+Middleware is used to:
+
+Parse JSON data
+
+Authenticate users (JWT)
+
+Log requests
+
+Handle errors
+
+Protect routes
+
+Types of middleware (interview point) 4 types of middleware .
+
+Application-level – applies to all routes
+
+Route-level – applies to specific routes
+
+Error-handling – handles errors
+
+Third-party – cors, morgan, helmet

@@ -1,7 +1,7 @@
 Question ------
 1.what is npm .
 2.what is express.js
-3.why we use nodemon inseat of node .
+3.why we use nodemon insead of node .
 4.what is cors why we use this
 5.what is middle ware
 
